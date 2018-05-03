@@ -31,7 +31,7 @@ The final encoding is :
 
 ### Encoding of a recoverable signature
 
-A signature for a Bitcoin signed message is a *recoverable ECDSA signature* where the value that is signed is the *HASH256* of the encoded message.
+A signature for a Bitcoin signed message is a *recoverable ECDSA signature* where the value that is signed is the *HASH256* <sub>(where HASH256 is `sha256(sha256(value))`)</sub> of the encoded message.
 Such a signature encodes three values:
 1. `recid`, a single byte which points the verifier to a specific public key to be recovered from the signature and message
 2. The signature's value `r`

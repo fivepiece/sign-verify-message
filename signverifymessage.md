@@ -43,7 +43,7 @@ The three factors which determine `recid` encoding are:
 
 1. The Y value of the **point** R being even or odd
 2. The X value of the **point** R being less than or more than the curve order
-3. The signing user's public key P being used in in validation is compressed or uncompressed
+3. The signing user's public key P being used in validation is compressed or uncompressed
 
 The first two items hint at which one of the two or four recovered public keys belong to the signer, and the third item hints at whether the compressed or uncompressed form should be used when hashing the pubkey for comparing against the provided base58 P2PKH address.
 The concatenation of `[ recid ][ r ][ s ]` is then encoded in base64.
